@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <title>Digital Experiences</title>
+    <link href="./output.css" rel="stylesheet">
+    <link href="https://db.onlinewebfonts.com/c/c6da2799f8877386e9a261e8744b2885?family=Aeonik+Pro+Light" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+        .fade-in {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+        }
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+</head>
+<body>
+    <div class="h-120 bg-black">
+        <header class="fade-in">
+            <img alt="Logo" class="h-10 w-10" src="./images/nav1.png"/>
+            <div class="flex items-center space-x-4">
+                <button class="bg-lime-300 text-black px-4 py-2 rounded-full">Get in touch</button>
+                <img src="./images/nav2.png" class="h-10 w-10 fas fa-th text-white text-xl">
+            </div>
+        </header>
+        <main>
+            <div class="title-container fade-in">
+                <h1 class="text-white text-6xl md:text-8xl font-bold">Digital</h1>
+            </div>
+            <div class="mid-section fade-in">
+                <h1 class="text-white text-6xl md:text-8xl font-bold pr-7">experiences</h1>
+                <div class="mt-14 border-t border-white w-145 my-4"></div>
+                <h1 class="text-white text-6xl md:text-8xl font-bold pl-13">that</h1>
+            </div>
+            <div class="subtitle-container fade-in">
+                <h1 class="text-white text-6xl md:text-8xl font-bold">Win by Design</h1>
+                <span class="text-2xl md:text-4xl">™</span>
+            </div>
+        </main>
+        <div class="flex justify-between items-center p-6 fade-in">
+            <div class="text-xs md:text-sm">
+                <span>CHECK OUT THE HYPE</span>
+                <i class="fas fa-arrow-down ml-2"></i>
+            </div>
+        </div>
+    </div>
+    <video style="width: 100%;" autoplay loop muted playsinline data-wf-ignore="true" data-object-fit="cover">
+        <source src="https://cdn.prod.website-files.com/6205ecdcec584c56193d6121/6306565a2fc10d28a0829211_RocketAir_Design_Reel_2022_Thumbnail_1920_2-transcode.mp4" data-wf-ignore="true">
+        <source src="https://cdn.prod.website-files.com/6205ecdcec584c56193d6121/6306565a2fc10d28a0829211_RocketAir_Design_Reel_2022_Thumbnail_1920_2-transcode.webm" data-wf-ignore="true">
+    </video>
+    <section class="bg-black text-white min-h-screen flex items-center px-8 md:px-16 fade-in">
+        <div class="max-w-2xl">
+            <h1 class="text-2xl md:text-4xl font-bold leading-tight">
+                RocketAir is a design and strategy <br> company with an adaptive approach to <br> problem solving.
+            </h1>
+        </div>
+    </section>
+    <section class="section-container bg-black text-white fade-in">
+        <h2 class="section-title text-base">We call it <span class="underline"></span></h2>
+        <div class="text-container">
+            <h1 class="main-text text-bold">ORBITAL <br> DESIGN</h1>
+        </div>
+        <button class="button">Get to know us</button>
+    </section>
+    <section class="what-we-do fade-in">
+        <div class="grid-container">
+            <div class="grid-item">
+                <span class="text">Brand</span>
+                <span class="arrow">&#8594;</span>
+            </div>
+            <div class="grid-item">
+                <span class="text">Product</span>
+                <span class="arrow">&#8594;</span>
+            </div>
+            <div class="grid-item">
+                <span class="text">Motion</span>
+                <span class="arrow">&#8594;</span>
+            </div>
+            <div class="grid-item rotating-text">
+                <div class="circle-text">WHAT WE DO - WHAT WE DO - WHAT WE DO</div>
+            </div>
+        </div>
+    </section>
+    <section class="bg-white text-black min-h-screen flex items-center px-8 md:px-16 fade-in">
+        <div class="max-w-2xl">
+            <h1 class="text-64 md:text-4xl font-bold leading-tight">
+                We partner with <br> forward-thinking <br> enterprises and startups.
+            </h1>
+        </div>
+    </section>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const elements = document.querySelectorAll(".fade-in");
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add("visible");
+                    }
+                });
+            }, { threshold: 0.2 });
+            elements.forEach(element => observer.observe(element));
+        });
+    </script>
+</body>
+</html>
