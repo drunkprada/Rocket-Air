@@ -4,23 +4,14 @@
     <meta charset="utf-8"/>
     <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
     <title>Digital Experiences</title>
+    
     <link href="./output.css" rel="stylesheet">
+    <link href="./styles.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/remixicon/fonts/remixicon.css">
+
     <link href="https://db.onlinewebfonts.com/c/c6da2799f8877386e9a261e8744b2885?family=Aeonik+Pro+Light" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
-    <style>
-        html {
-            scroll-behavior: smooth;
-        }
-        .fade-in {
-            opacity: 0;
-            transform: translateY(20px);
-            transition: opacity 0.8s ease-out, transform 0.8s ease-out;
-        }
-        .fade-in.visible {
-            opacity: 1;
-            transform: translateY(0);
-        }
-    </style>
+    
 </head>
 <body>
     <div class="h-120 bg-black">
@@ -63,51 +54,176 @@
             </h1>
         </div>
     </section>
-    <section class="section-container bg-black text-white fade-in">
-        <h2 class="section-title text-base">We call it <span class="underline"></span></h2>
-        <div class="text-container">
-            <h1 class="main-text text-bold">ORBITAL <br> DESIGN</h1>
+    <div class="sec5">
+      <div data-index="1" class="slide sld">
+        <div class="opener"></div>
+        <div class="tile">
+          <h3 class="fs3">Brand</h3>
+          <div class="icon">
+            <i class="ri-arrow-right-line fs5 mainarrow"></i>
+            <i class="ri-arrow-right-up-line fs5 rightarrow"></i>
+          </div>
         </div>
-        <button class="button">Get to know us</button>
-    </section>
-    <section class="what-we-do fade-in">
-        <div class="grid-container">
-            <div class="grid-item">
-                <span class="text">Brand</span>
-                <span class="arrow">&#8594;</span>
-            </div>
-            <div class="grid-item">
-                <span class="text">Product</span>
-                <span class="arrow">&#8594;</span>
-            </div>
-            <div class="grid-item">
-                <span class="text">Motion</span>
-                <span class="arrow">&#8594;</span>
-            </div>
-            <div class="grid-item rotating-text">
-                <div class="circle-text">WHAT WE DO - WHAT WE DO - WHAT WE DO</div>
-            </div>
+        <p class="fs5">Unique brand identities that make a mark.</p>
+      </div>
+      <div data-index="2" class="slide sld">
+        <div class="opener"></div>
+
+        <div class="tile">
+          <h3 class="fs3">Product</h3>
+          <div class="icon">
+            <i class="ri-arrow-right-line fs5 mainarrow"></i>
+            <i class="ri-arrow-right-up-line fs5 rightarrow"></i>
+          </div>
         </div>
-    </section>
-    <section class="bg-white text-black min-h-screen flex items-center px-8 md:px-16 fade-in">
-        <div class="max-w-2xl">
-            <h1 class="text-64 md:text-4xl font-bold leading-tight">
-                We partner with <br> forward-thinking <br> enterprises and startups.
-            </h1>
+        <p class="fs5">Intuitive digital produts that people get.</p>
+      </div>
+      <div data-index="3" class="slide sld">
+        <div class="opener"></div>
+
+        <div class="tile">
+          <h3 class="fs3">Motion</h3>
+          <div class="icon">
+            <i class="ri-arrow-right-line fs5 mainarrow"></i>
+            <i class="ri-arrow-right-up-line fs5 rightarrow"></i>
+          </div>
         </div>
-    </section>
-    <script>
-        document.addEventListener("DOMContentLoaded", function () {
-            const elements = document.querySelectorAll(".fade-in");
-            const observer = new IntersectionObserver((entries) => {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting) {
-                        entry.target.classList.add("visible");
-                    }
-                });
-            }, { threshold: 0.2 });
-            elements.forEach(element => observer.observe(element));
-        });
-    </script>
+        <p class="fs5">Compelling animation that inspires action.</p>
+      </div>
+      <div class="videoslide sld">
+        <div class="circular">
+          <div class="minicircle"></div>
+          <img
+            src="https://assets.website-files.com/6205ecdcec584c56193d6121/624e913ad5a78b549657ae48_services_circle-text.svg"
+            alt=""
+          />
+        </div>
+        <div class="opener" id="opener1">
+          <video
+            autoplay
+            loop
+            muted
+            src="https://assets.website-files.com/6205ecdcec584c56193d6121/625049f25321603541f849ab_Brand_Work_noWindow_540x1080-transcode.mp4"
+          ></video>
+        </div>
+        <div class="opener" id="opener2">
+          <video
+            autoplay
+            loop
+            muted
+            src="https://assets.website-files.com/6205ecdcec584c56193d6121/62bd5211d2734d33b4f1f3e8_Product_Work_noWindow_540x1080_v2-transcode.mp4"
+          ></video>
+        </div>
+        <div class="opener" id="opener3">
+          <video
+            autoplay
+            loop
+            muted
+            src="https://assets.website-files.com/6205ecdcec584c56193d6121/62504a9bfb995aa187002397_Motion_Work_noWindow_540x1080-transcode.mp4"
+          ></video>
+        </div>
+      </div>
+    </div>
+    
+    <div class="sec6">
+        <h2 class="fs2 rowtexts">
+          We partner with<br />forward-thinking<br />enterprises and
+          startups.
+        </h2>
+        <div class="partnerscomp">
+          <div class="partner">
+            <img
+              src="https://assets-global.website-files.com/620970e0fc117e313fe36ebd/63d7e8af53f4b8cec99e9421_logo-terra.svg"
+              alt=""
+            />
+            <p class="fs5">
+              Helping a fintech leader redefine banking. We designed
+              BlockFi’s web and mobile app, which lets users manage their
+              crypto wallet, trade crypto, and borrow money against their
+              holdings.
+            </p>
+          </div>
+          <div class="partner">
+            <img
+              src="https://assets.website-files.com/620970e0fc117e313fe36ebd/624db668954b1077a51d3dab_qed-investors.svg"
+              alt=""
+            />
+            <p class="fs5">
+              Helping a fintech leader redefine banking. We designed
+              BlockFi’s web and mobile app, which lets users manage their
+              crypto wallet, trade crypto, and borrow money against their
+              holdings.
+            </p>
+          </div>
+          <div class="partner">
+            <img
+              src="https://assets-global.website-files.com/620970e0fc117e313fe36ebd/624ed1a4baf7a9339f3a7866_software_ag.svg"
+              alt=""
+            />
+            <p class="fs5">
+              Helping a fintech leader redefine banking. We designed
+              BlockFi’s web and mobile app, which lets users manage their
+              crypto wallet, trade crypto, and borrow money against their
+              holdings.
+            </p>
+          </div>
+          <div class="partner">
+            <img
+              src="https://assets-global.website-files.com/620970e0fc117e313fe36ebd/63d7e9819f22e10fe22128bb_logo_qlik.svg"
+              alt=""
+            />
+            <p class="fs5">
+              Helping a fintech leader redefine banking. We designed
+              BlockFi’s web and mobile app, which lets users manage their
+              crypto wallet, trade crypto, and borrow money against their
+              holdings.
+            </p>
+          </div>
+        </div>
+      </div>
+   
+    <div class="sec7">
+        <div class="headingbox">
+          <h1 class="fs1">work</h1>
+        </div>
+        <div class="cbholder">
+          <div class="cardbox">
+            <div class="card">
+              <div class="top">
+                <img
+                  src="https://assets-global.website-files.com/620970e0fc117e313fe36ebd/628f3a391956b4593811ca66_thumb_newlimit-p-500.jpeg"
+                  alt=""
+                />
+              </div>
+              <div class="bottom">
+                <h4 class="fs4">NewLimit</h4>
+              </div>
+            </div>
+          </div>
+          <div class="cardbox">
+            <div class="card">
+              <div class="top">
+                <img
+                  src="https://assets-global.website-files.com/620970e0fc117e313fe36ebd/631047a405bc513ad86a56ae_surf-internet-thumbnail-p-500.jpg"
+                  alt=""
+                />
+              </div>
+              <div class="bottom">
+                <h4 class="fs4">Surf Internet</h4>
+              </div>
+            </div>
+          </div>
+          <div class="cardbox">
+            <div class="card">
+              <div class="top">
+                <img
+                  src="https://assets-global.website-files.com/620970e0fc117e313fe36ebd/6268fab393803a81e2d7a89e_focus-V_thumbnail-p-500.jpeg"
+                  alt=""
+                />
+              </div>
+
+    
+   
+            
 </body>
 </html>
