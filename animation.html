@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scroll Effect</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: Arial, sans-serif;
+            height: 200vh;
+            background-color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .container {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            width: 80%;
+            color: black;
+            transition: color 0.5s;
+        }
+        .line {
+            flex: 1;
+            height: 2px;
+            background: black;
+        }
+        .circle {
+            position: fixed;
+            bottom: 10%; /* Ensures the circle starts visible */
+            left: 50%;
+            transform: translateX(-50%);
+            width: 50px;
+            height: 50px;
+            background: black;
+            border-radius: 50%;
+            transition: background 0.5s;
+        }
+        .invert {
+            background: black;
+        }
+        .invert .container {
+            color: white;
+        }
+        .invert .circle {
+            background: #39ff14; /* Neon Green */
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <span>Take a look at what</span>
+        <div class="line"></div>
+        <span>we can do for you</span>
+    </div>
+    <div class="circle"></div>
+    <script>
+        let circle = document.querySelector(".circle");
+        let container = document.querySelector(".container");
+        let body = document.body;
+
+        window.addEventListener("scroll", function() {
+            let scrollY = window.scrollY;
+            let windowHeight = window.innerHeight;
+            let containerRect = container.getBoundingClientRect();
+            let lineCenter = containerRect.top + containerRect.height / 2;
+            let circleRect = circle.getBoundingClientRect();
+            let circleCenter = circleRect.top + circleRect.height / 2;
+
+            let newY = Math.max(lineCenter - circleCenter, -scrollY / 2);
+            gsap.to(circle, { y: newY, duration: 0.1, ease: "none" });
+
+            if (circleCenter >= lineCenter) {
+                body.classList.add("invert");
+            } else {
+                body.classList.remove("invert");
+            }
+        });
+    </script>
+</body>
+</html>
